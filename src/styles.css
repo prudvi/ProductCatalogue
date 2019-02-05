@@ -11,10 +11,12 @@ h2, h3 {
 }
 body {
   margin: 2em;
+  margin: 20px !important;
 }
 body, input[text], button {
   color: #888;
   font-family: Cambria, Georgia;
+  
 }
 a {
   cursor: pointer;
