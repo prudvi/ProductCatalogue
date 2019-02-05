@@ -14,13 +14,17 @@ import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { from } from 'rxjs';
+import { BooksComponent } from './books/books.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    BooksComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,FormsModule,NgbModule,ApplicationRoutesModule
