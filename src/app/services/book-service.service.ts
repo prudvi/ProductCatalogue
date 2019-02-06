@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { Observable, of,from } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 
+import { BookModel } from '../model/book-model';
+//import { staticBookList } from '../model/books-list';
+import { staticBookList } from '../model/books-list'
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +20,14 @@ export class BookServiceService {
       'Content-Type':  'application/json'
     })
   };
+
+  getBooks(): Observable<BookModel[]> {
+    //let bookArray:BookModel[] = booksList;
+    // return of(booksList)
+    //   .pipe(map(books => books || []));
+
+    return of(staticBookList.getList());
+  }
 
   private extractData(res: Response) {
     let body = res;
