@@ -22,4 +22,11 @@ describe('FooterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as panel Body 'Product Footer'`, () => {
+    const fixture = TestBed.createComponent(FooterComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.panel-body').textContent).toEqual("Product Footer");
+  });
 });
