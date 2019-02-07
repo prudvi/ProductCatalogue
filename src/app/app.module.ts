@@ -16,6 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { from } from 'rxjs';
 import { BooksComponent } from './books/books.component';
 import { MoviesComponent } from './movies/movies.component';
+import { BooksListComponent } from './books/books-list/books-list.component';
+import { RatingBooksModuleModule } from './rating-books-module/rating-books-module.module'
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { MoviesComponent } from './movies/movies.component';
     FooterComponent,
     BodyComponent,
     BooksComponent,
-    MoviesComponent
+    MoviesComponent,
+    BooksListComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,FormsModule,NgbModule,ApplicationRoutesModule
+    BrowserModule,HttpClientModule,FormsModule,NgbModule,
+    ApplicationRoutesModule,RatingBooksModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
