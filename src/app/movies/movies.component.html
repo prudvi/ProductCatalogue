@@ -1,29 +1,29 @@
 <div class="panel panel-default">
-  <div class="panel-heading">Books
+  <div class="panel-heading">Moviess
     <div> Home</div>
   </div>
   <div class="panel-body">
       <div class="row rowHeader">
           <div class="col-md-4 col-xs-6">
-            Book Title
+            Movies Title
           </div>
           <div class="col-md-4 col-xs-6">
-              Author
+              Name
           </div>
           <div class="col-md-4 col-xs-6">
           Rating
             </div>
         </div>
 
-        <div class="row rowContent" *ngFor="let item of bookList" >
+        <div class="row rowContent" *ngFor="let item of MoviesList" >
             <div class="col-md-4 col-xs-6">
                 <a ng-href="#">
-                  <div>{{item.bookTitle}}</div>
+                  <div>{{item.MoviesTitle}}</div>
                 </a>
             </div>
             <div class="col-md-4 col-xs-6">
                 <a ng-href="#">
-                    <div>{{item.authorName}}</div>
+                    <div>{{item.movieName}}</div>
                 </a>
             </div>
             <div class="col-md-4 col-xs-6">

@@ -3,4 +3,5 @@ export interface BookModel {
     bookTitle:string;
     rating: Number;
     authorName:string;
+    isSelected: boolean;
 }

@@ -27,6 +27,6 @@ describe('HeaderComponent', () => {
     const fixture = TestBed.createComponent(HeaderComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.panel-body').textContent).toEqual("Product Header");
+    expect(compiled.querySelector('.panel-body').textContent).toContain("Product Header");
   });
 });
