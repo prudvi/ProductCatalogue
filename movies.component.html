@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Moviess
+    <div> Home</div>
+  </div>
+  <div class="panel-body">
+      <div class="row rowHeader">
+          <div class="col-md-4 col-xs-6">
+            Movies Title
+          </div>
+          <div class="col-md-4 col-xs-6">
+              Author
+          </div>
+          <div class="col-md-4 col-xs-6">
+          Rating
+            </div>
+        </div>
+
+        <div class="row rowContent" *ngFor="let item of MoviesList" >
+            <div class="col-md-4 col-xs-6">
+                <a ng-href="#">
+                  <div>{{item.MoviesTitle}}</div>
+                </a>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <a ng-href="#">
+                    <div>{{item.movieName}}</div>
+                </a>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <a ng-href="#">
+                    <div>{{item.rating}}</div>
+                </a>
+              </div>
+          </div>
+   
+  </div>
+</div>

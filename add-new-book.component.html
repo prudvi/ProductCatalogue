@@ -1,0 +1,51 @@
+<form class="form-horizontal" #addBookForm="ngForm">
+    <div class="form-group">
+        <label for="inputbook" class="control-label col-xs-2">New Book</label>
+        <div class="col-xs-10">
+            <input type="text" class="form-control" id="inputbook" 
+            placeholder="book Name" required [(ngModel)]="model.bookName" name="bookName"
+            #bookName="ngModel">
+
+            <div [hidden]="!bookName.errors?.required || !bookName.touched || !bookName.pristine" 
+            class="alert alert-danger input-validation"> bookName is required
+            </div>
+        </div>
+       
+    </div>
+    <div class="form-group">
+        <label for="inputauthor" class="control-label col-xs-2">Author Name</label>
+        <div class="col-xs-10">
+            <input type="text" class="form-control" id="inputauthor"
+             placeholder="author Name" required [(ngModel)]="model.authorName" 
+             name="authorName"
+             #authorName="ngModel">
+
+             <div [hidden]="!authorName.errors?.required || !authorName.touched || !authorName.pristine" 
+              class="alert alert-danger input-validation"> authorName is required
+              </div>
+        </div>
+        
+    </div>
+
+    <div class="form-group">
+        <label for="inputrating" class="control-label col-xs-2">Book Rating</label>
+        <div class="col-xs-10">
+            <input type="number" class="form-control" pattern= "[0-9]"
+             id="inputrating" placeholder="rating" 
+             min="1" max="10" required [(ngModel)]="model.rating" name="rating"
+             #rating="ngModel">
+             <div [hidden]="!rating.errors?.required || !rating.touched || !rating.pristine" 
+             class="alert alert-danger input-validation"> Book Rating is required
+             </div>
+        </div>
+       
+    </div>
+    
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="button" class="btn btn-primary" (click)="add(addBookForm)">Add</button>
+            <button type="submit" class="btn btn-danger" (click)="cancel()" >Cancel</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
+        </div>
+    </div>
+</form>
