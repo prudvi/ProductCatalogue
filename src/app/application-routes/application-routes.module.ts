@@ -5,13 +5,12 @@ import { BodyComponent } from '../body/body.component';
 import { BooksComponent } from '../books/books.component';
 import { MoviesComponent } from '../movies/movies.component';
 
+import { AddNewBookComponent } from '../books/add-books/add-new-book/add-new-book.component';
 const routes: Routes = [
-   { path: '', component: BodyComponent}
-,
+   { path: '', component: BodyComponent},
     { path: 'movies', component: MoviesComponent},
-    { path: 'books', component: BooksComponent}
-
-   
+    { path: 'books', component: BooksComponent},
+    { path: 'addNewBook', component: AddNewBookComponent }
 ];
 
 @NgModule({
