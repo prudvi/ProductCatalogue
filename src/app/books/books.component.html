@@ -1,8 +1,21 @@
-<div class="panel panel-default">
-  <div class="panel-heading">Books
-    <div style="float:right;"> <a routerLink="/">Home</a></div>
-  </div>
+<div class="panel panel-default panel-border-disable">
   <div class="panel-body">
-    <app-books-list [bookList]="bookList"></app-books-list>
+      <div class="align-Items">
+          <ul>
+              <li class="custom-menu add-button">
+                  <a routerLink="/addNewBook">Add</a>
+              </li>
+              <li *ngIf="selectedBooks.length" class="custom-menu delete-button" style="float:right;" 
+                (click)="deleteSelected($event)">
+                  Delete
+              </li>
+          </ul>
+      </div>
+      <div *ngIf="bookListState$ | async as bookListState">
+          <app-books-list [bookList]="bookListState.bookList" 
+          (selectMultiple)="addMultiple($event)"
+          (deleteSelected)="deleteSingleBook($event)"></app-books-list>
+      </div>
+   
   </div>
 </div>
