@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
 
-  title= "Welcome to Product Catalog"
+  title = "Welcome to Product Catalog";
   constructor() { }
 
   ngOnInit() {
