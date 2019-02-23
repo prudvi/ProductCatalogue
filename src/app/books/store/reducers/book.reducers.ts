@@ -8,7 +8,7 @@ export interface BookListState {
     loading: boolean;
 }
 
-const initialState: BookListState = {
+export const initialState: BookListState = {
     loading: false,
     bookList: staticBookList.getList()
 } 
