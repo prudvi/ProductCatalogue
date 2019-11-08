@@ -1,6 +1,6 @@
 # ProductCatalogue
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+This project was generated ia generated using Angula CLI version 6.1. This is basically used to perform crud operation on the client and server using ngrx-strore for maintaining state across the application.
 
 ## Development server
 
